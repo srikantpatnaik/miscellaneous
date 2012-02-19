@@ -9,9 +9,10 @@ find the sum of the even-valued terms.
 
 """
 
-def fib(n):
-    if n == 0: return [0]
-    x = [0,1]
-    while len(x) <= n:
+def fib():
+    x, y = [1,2], 2 
+    while x[-1] < 4000000 :
         x.append(x[len(x)-1] + x[len(x)-2])
-    return x
+        if not x[-1] % 2: 
+            y += x[-1]
+    return y 
