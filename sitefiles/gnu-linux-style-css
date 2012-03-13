@@ -787,10 +787,35 @@ margin: 0;
 background: none;
 color: #333;
 }
+
+/* --- disqus css -- */
+
+#disqus_thread {
+color: #ffffff;
+border-style: 0px solid;
+border-color: #cccccc;
+padding: 35px;
+}
+
+#dsq-content #dsq-comments .dsq-comment-body {
+color: #fff;
+background-color: #000000;
+} 
+
+.dsq-reaction-body {
+color: #fff;
+}
+
+.dsq-reaction-retweets {
+color: #ccc;
+}
+
+/*--- end disqus css --*/
  
 /
 The above file is backup of original file. These changes are made in present site. 
 172 - width changed from 485 to 520
 154 - width changed from 400 to 350
 475 - commented to remove 75 from viewmore
+793-813 -new lines added for disque css to shrink width of the comment box
 /
