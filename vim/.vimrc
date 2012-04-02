@@ -1,4 +1,3 @@
-"Michael Crosby crosbymichael.com
 syntax on
 set nonumber
 colorscheme slate
