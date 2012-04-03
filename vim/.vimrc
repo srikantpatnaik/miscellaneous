@@ -4,6 +4,7 @@ colorscheme slate
 set tabstop=4
 set shiftwidth=4
 set nocompatible
+set textwidth=79
 
 "additions
 set title
