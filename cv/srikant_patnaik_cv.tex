@@ -1,0 +1,278 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Two Column One Page Curriculum Vitae
+% LaTeX Template
+% Version 1.1 (24/1/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro (The CV Inn)
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt]{article} % Font size - 10pt, 11pt or 12pt
+
+\usepackage[hmargin=1.25cm, vmargin=1.5cm]{geometry} % Document margins
+
+\usepackage{marvosym} % Required for symbols in the colored box
+\usepackage{ifsym} % Required for symbols in the colored box
+
+\usepackage[usenames,dvipsnames]{xcolor} % Allows the definition of hex colors
+
+% Fonts and tweaks for XeLaTeX
+%\usepackage{fontspec,xltxtra,xunicode}
+%\defaultfontfeatures{Mapping=tex-text}
+%\setromanfont[Mapping=tex-text]{Hoefler Text} % Main document font
+%\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans} % Font for your name at the top
+%\setmonofont[Scale=MatchLowercase]{Andale Mono}
+
+% Colors for links, text and headings
+\usepackage{hyperref}
+\definecolor{linkcolor}{HTML}{506266} % Blue-gray color for links
+\definecolor{shade}{HTML}{F5DD9D} % Peach color for the contact information box
+\definecolor{text1}{HTML}{2b2b2b} % Main document font color, off-black
+\definecolor{headings}{HTML}{701112} % Dark red color for headings
+% Other color palettes: shade=B9D7D9 and linkcolor=A40000; shade=D4D7FE and linkcolor=FF0080
+
+\hypersetup{colorlinks,breaklinks, urlcolor=linkcolor, linkcolor=linkcolor} % Set up links and colors
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+% Headers and footers can be added with the \lhead{} \rhead{} \lfoot{} \rfoot{} commands
+% Example footer:
+%\rfoot{\color{headings} {\sffamily Last update: \today}. Typeset with Xe\LaTeX}
+
+\renewcommand{\headrulewidth}{0pt} % Get rid of the default rule in the header
+
+\usepackage{titlesec} % Allows creating custom \section's
+
+% Format of the section titles
+\titleformat{\section}{\color{headings}
+\scshape\Large\raggedright}{}{0em}{}[\color{black}\titlerule]
+
+\titlespacing{\section}{0pt}{0pt}{5pt} % Spacing around titles
+
+\begin{document}
+
+\color{text1} % Sets the default text color for the whole document to the color defined as 'text1'
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\par{\centering{\sffamily\Huge U Srikant Patnaik}\\ % Your name
+%{\color{headings}\fontspec[Variant = 2]{Zapfino} Curriculum {Vit\fontspec[Variant = 3]{Zapfino}\ae}\\[15pt]\par} % Curriculum vitae text in the Zapfino font
+	
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.5\textwidth} % Start the left-hand side of the page
+\vspace{0pt} % Trick for alignment
+	
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Work Experience} 
+
+%------------------------------------------------
+% WORK EXPERIENCE 1
+%------------------------------------------------
+
+{\raggedleft\textsc{Current, from Feb 2011}\par}
+
+{
+\raggedright\large Research Assistant\\
+\textit{Indian Institute of Technology, Bombay}\\[5pt]}
+
+
+\normalsize{Ported Scilab, C, Cpp and Python as part of APL(Aakash programming lab) project. One can create, edit, execute source files in the left window and interact with output in right. It also features complete offline language reference and user manual.\\
+Tools: bash, python, chroot, js, java\\
+Link:  \href{http://github.com/androportal/installer}{http://github.com/androportal/installer}\\
+
+
+Created a boot able GNU/Linux (Ubuntu-12.10) sdcard image for Aakash tablet. Included drivers for many popular hardwares. One can learn arduino, perform science experiments using expEYES kit. Customized lxde and openbox for touch. \\
+Tools: uboot, Linux-kernel, custom filesystem\\
+Link:  \href{http://github.com/androportal/linux-on-aakash}{http://github.com/androportal/linux-on-aakash}\\
+
+
+Under progress: Building a web app to debug remote Linux machines through web interface. Picture a client with some issue(desktop/tablet),
+ to get remote support client need to login to our portal(webpage) and lodge complaint. Technicians on the other hand can also login to same portal and find
+the list of client issues, they can get access to client's machine and attend to their problem online. This idea can be extended to debug/view/access any kind of device/data. The basic functionality is up and active in local network.\\ 
+Tools: web2py, reverse-ssh-tunnel, shellinabox\\
+
+}
+
+
+
+%------------------------------------------------
+% WORK EXPERIENCE 2
+%------------------------------------------------
+
+{\raggedleft\textsc{August 2009 -- Nov 2010}\par}
+
+{\raggedright\large  Lecturer in Electronic Science\\
+\textit{Loyola Academy, Hyderabad}\\[5pt]}
+
+\normalsize{Instructed courses in basic electronics, embedded systems and T.V engg to undergrads. Motivated them to adopt free software and introduced FOSS tools in my embedded systems lab. Conducted various events and mentored student FOSS projects.}\\
+
+%------------------------------------------------
+% WORK EXPERIENCE 3
+%------------------------------------------------
+
+{\raggedleft\textsc{May 2008 -- Present}\par}
+
+{\raggedright\large  Freelancer and hobbyist\\
+\textit{Under the sun with GNU/Linux}\\[5pt]}
+
+\normalsize{ Developed an 8051 ISP programmer for ATMEL devices. It can write hex to flash, verify and modify lock bits.\\
+Link:  \href{http://sourceforge.net/projects/linux-isp-89sxx/}{http://sourceforge.net/projects/linux-isp-89sxx/}\\ 
+
+
+Provided support to Crompton Greaves in automating signals in Konkan Railway project, by setting up communication between client and TRU64 server.\\
+
+IPython Notebook on Android \\
+Link: \href{http://github.com/androportal/apk-ipython}{https://github.com/androportal/apk-ipython}\\
+}
+
+
+\end{minipage} % End the left-hand side of the page
+\hfill
+\begin{minipage}[t]{0.44\textwidth} % Start the right-hand side of the page
+\vspace{0pt} % Trick for alignment
+
+%----------------------------------------------------------------------------------------
+%	COLORED BOX
+%----------------------------------------------------------------------------------------
+
+\colorbox{shade}{\textcolor{text1}{
+\begin{tabular}{c|p{7cm}}
+\raisebox{-4pt}{\textifsymbol{18}} & 429, Tansa House, IIT Bombay \\ % Address
+\raisebox{-3pt}{\Mobilefone} & +91 900 499 6314 \\ % Phone number
+\raisebox{-1pt}{\Letter} & \href{mailto:usrikantpatnaik@gmail.com}{usrikantpatnaik@gmail.com} \\ % Email address
+\Keyboard & \href{http://gnu-linux.org}{http://gnu-linux.org} \\ % Website
+\end{tabular}
+}
+}\\[10pt]
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education} 
+
+\begin{tabular}{rl} % Start a table with two columns, one for dates and one for qualifications
+
+%------------------------------------------------
+% EDUCATION 1
+%------------------------------------------------
+
+2006 -- 2008 & \textbf{Master of Science} \\ 
+& \textsc{Electronics Science} \\ 
+& \textit{DAVV, Indore}\\
+&\\
+	 
+%------------------------------------------------
+% EDUCATION 2
+%------------------------------------------------
+
+2002 -- 2006 & \textbf{Bachelor of Science } \\
+& \textsc{Applied Electronics} \\
+& \textit{Regional Institute of Education} \\
+& \textit{Bhubaneswar}\\	
+&\\
+
+	 
+%------------------------------------------------
+% EDUCATION 3
+%------------------------------------------------
+
+2002 -- 2006 & \textbf{Bachelor of Education} \\
+& \textit{Regional Institute of Education,} \\
+& \textit{Bhubaneswar}\\	
+
+%----------------------------------------------------------------------------------------
+
+\end{tabular}\\[10pt]
+
+
+\section{Other courses} 
+
+\begin{tabular}{rl} % Start a table with two columns, one for dates and one for qualifications
+
+%------------------------------------------------
+% EDUCATION 1
+%------------------------------------------------
+
+2004 -- 2005 & \normalsize{Diploma in electronic engineering} \\ 
+&\\
+	 
+%------------------------------------------------
+% EDUCATION 2
+%------------------------------------------------
+
+2008 -- 2009 & \normalsize{Course in embedded systems \& RTOS} \\
+&\\
+	 
+%------------------------------------------------
+% EDUCATION 3
+%------------------------------------------------
+
+2009 & \normalsize{Course in Linux system \&} \\
+     & \normalsize{network administration} \\	
+&\\
+
+%----------------------------------------------------------------------------------------
+
+\end{tabular}\\[10pt]
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	TALKS
+%----------------------------------------------------------------------------------------
+
+\section{Talks} 
+
+\begin{tabular}{rl}
+2012	 & \textbf{GNUnify}\\
+& \textit{Web based embedded project design}\\ \\
+
+%------------------------------------------------
+
+2012	 & \textbf{FOSS.IN}\\
+& \textit{FOSS on Aakash}\\ \\
+
+%------------------------------------------------
+
+2012	 & \textbf{SciPy.in}\\
+& \textit{Aakash and Python: Py in the Sky}
+
+\end{tabular}\\[10pt]
+
+%----------------------------------------------------------------------------------------
+%	ABOUT ME
+%----------------------------------------------------------------------------------------
+
+\section{About Me} 
+\normalsize{Well, I can go crazy to find science behind any new gizmo. The driving motivation for me is when somebody says it can't be done. I try to follow different approach to already solved problems, I believe there are many unexplored ways which can save resources. \\
+My other interests include comics, humour, cartoons and sometimes designing scale down models. I also like to explore history and space. }\\
+
+
+\end{minipage} % End right-hand side of the page
+
+\end{document}  
