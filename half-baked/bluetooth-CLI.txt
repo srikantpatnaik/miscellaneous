@@ -1,0 +1,48 @@
+sudo apt-get install bluez-tools
+
+#the below three commands are required only once
+hcitool scan
+sudo bluez-simple-agent hci0  00:07:80:44:A2:E1
+sudo bluez-test-device trusted 00:07:80:44:A2:E1 yes
+#sudo rfcomm connect hci0 00:07:80:44:A2:E1 
+#to know the supporting protocols
+sdptool browse 00:07:80:44:A2:E1 
+
+#to make node and connect
+sudo rfcomm release 0
+sudo rfcomm bind /dev/rfcomm0 00:07:80:44:A2:E1
+sudo chmod o+rw /dev/rfcomm
+
+minicom -s
+#to connect to device use minicom with following settings:
+#115200, No, No
+#Modem n dialing: clear "Init string", "Reset String", "Hang up", 
+minicom
+
+
+
+The Bluetooth protocol stack is split in two parts: a "controller stack" 
+containing the timing critical radio interface, and a "host stack" dealing
+with high level data.
+
+Most commonly used controller stack is "Host Controller Interface (HCI)"
+Standardised communication between the host stack (e.g., a PC or mobile 
+phone OS) and the controller (the Bluetooth IC). This standard allows the 
+host stack or controller IC to be swapped with minimal adaptation.
+
+Most commonly used host stack is "Radio frequency communication (RFCOMM)"
+The Bluetooth protocol RFCOMM is a simple set of transport protocols, 
+made on top of the L2CAP protocol, providing emulated RS-232 serial ports.
+RFCOMM is sometimes called serial port emulation. The Bluetooth serial port
+profile is based on this protocol. RFCOMM provides a simple reliable data
+stream to the user, similar to TCP. It is used directly by many telephony
+related profiles as a carrier for AT commands, as well as being a transport
+layer for OBEX over Bluetooth.
+Many Bluetooth applications use RFCOMM because of its widespread support and 
+publicly available API on most operating systems. Additionally, applications
+that used a serial port to communicate can be quickly ported to use RFCOMM.
+In the protocol stack, RFCOMM is bound to L2CAP.
+
+http://en.wikipedia.org/wiki/Bluetooth_protocols
+
+
