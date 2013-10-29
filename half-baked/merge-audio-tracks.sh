@@ -18,3 +18,6 @@ ffmpeg -i Ubuntu-Desktop-Telugu.ogv -y -b 12k -ac 1 -ar 11500 -vn -acodec libvor
 #ffmpeg -y -i B.mkv -i B.mp3 -i T.mp3 -map 0.0 -map 1.0 -map 2.0 -b 200k -vcodec copy -acodec copy out.mkv -newaudio
 
  mkvmerge -o "linux-all-lang.ogv" -A Ubuntu-Desktop-English.ogv E.mp3 B.mp3 T.mp3 G.mp3 K.mp3 MM.mp3 M.mp3 U.mp3
+
+#convert ogv to webm, and reduce size upto 50%, reduce audio channel and others
+ffmpeg -y -i  Ubuntu-Desktop-English.ogv -acodec libvorbis -ac 1 -ar 11500 output.webm
