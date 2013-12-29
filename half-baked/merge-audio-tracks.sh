@@ -21,3 +21,6 @@ ffmpeg -i Ubuntu-Desktop-Telugu.ogv -y -b 12k -ac 1 -ar 11500 -vn -acodec libvor
 
 #convert ogv to webm, and reduce size upto 50%, reduce audio channel and others
 ffmpeg -y -i  Ubuntu-Desktop-English.ogv -acodec libvorbis -ac 1 -ar 11500 output.webm
+
+# Convert mov to ogv 
+ffmpeg -y -i intro-R-final.mov -b 20k -acodec libvorbis -ac 1 -ar 11500 -ab 12k output.ogv
